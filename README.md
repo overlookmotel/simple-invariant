@@ -9,7 +9,47 @@
 
 ## Usage
 
-This module is under development and not ready for use yet.
+### What's it for?
+
+Using invariants to throw errors has been popularized by [React](https://reactjs.org/). A commonly-used NPM package is [tiny-invariant](https://www.npmjs.com/package/tiny-invariant).
+
+`invariant` performs two purposes:
+
+1. A terser syntax for throwing errors
+2. Removal of lengthy error messages from production builds to save bytes with e.g. [babel-plugin-dev-expression](https://www.npmjs.com/package/babel-plugin-dev-expression)
+
+In the case of NodeJS apps, code size is often less of a issue, and you may not want to remove useful error messages when running an app in production mode. However, you may well like using the `invariant()` syntax anyway.
+
+That's where this package comes in.
+
+### What is this package?
+
+It's the simplest possible invariant function. The code is:
+
+```js
+const PREFIX = 'Invariant failed';
+function invariant( condition, message ) {
+  if ( !condition ) {
+    throw new Error( message ? `${PREFIX}: ${message}` : PREFIX );
+  }
+};
+```
+
+So, this code:
+
+```js
+if ( !foo ) throw new Error( 'foo must be truthy' );
+```
+
+...can be replaced with the shorter:
+
+```js
+invariant( foo, 'foo must be truthy' );
+```
+
+### Isn't this the same as tiny-invariant?
+
+Pretty much. The only difference is that the error thrown will *always* have the full error message, regardless of whether `process.env.NODE_ENV === 'production'` or not.
 
 ## Versioning
 
