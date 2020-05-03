@@ -1,6 +1,6 @@
 {
   "name": "simple-invariant",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Super-simple invariant function",
   "main": "index.js",
   "files": [
