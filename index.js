@@ -6,10 +6,10 @@
 'use strict';
 
 // Constants
-const PREFIX = 'Invariant failed';
+const DEFAULT_MESSAGE = 'Invariant failed';
 
 // Exports
 
 module.exports = function invariant(condition, message) {
-	if (!condition) throw new Error(message ? `${PREFIX}: ${message}` : PREFIX);
+	if (!condition) throw new Error(message || DEFAULT_MESSAGE);
 };

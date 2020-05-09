@@ -27,10 +27,9 @@ That's where this package comes in.
 It's the simplest possible invariant function. The code is:
 
 ```js
-const PREFIX = 'Invariant failed';
 function invariant( condition, message ) {
   if ( !condition ) {
-    throw new Error( message ? `${PREFIX}: ${message}` : PREFIX );
+    throw new Error( message || 'Invariant failed' );
   }
 };
 ```

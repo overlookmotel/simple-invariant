@@ -15,11 +15,15 @@ require('./support/index.js');
 
 describe('throws error if condition false', () => {
 	it('with error message', () => {
-		expect(() => invariant(false, 'My error')).toThrow(new Error('Invariant failed: My error'));
+		expect(() => invariant(false, 'My error')).toThrow(new Error('My error'));
 	});
 
 	it('with no error message', () => {
 		expect(() => invariant(false)).toThrow(new Error('Invariant failed'));
+	});
+
+	it('with empty error message', () => {
+		expect(() => invariant(false, '')).toThrow(new Error('Invariant failed'));
 	});
 });
 
