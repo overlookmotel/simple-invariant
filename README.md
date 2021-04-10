@@ -1,8 +1,7 @@
 [![NPM version](https://img.shields.io/npm/v/simple-invariant.svg)](https://www.npmjs.com/package/simple-invariant)
-[![Build Status](https://img.shields.io/travis/overlookmotel/simple-invariant/master.svg)](http://travis-ci.org/overlookmotel/simple-invariant)
+[![Build Status](https://img.shields.io/github/workflow/status/overlookmotel/simple-invariant/Test.svg)](https://github.com/overlookmotel/simple-invariant/actions)
 [![Dependency Status](https://img.shields.io/david/overlookmotel/simple-invariant.svg)](https://david-dm.org/overlookmotel/simple-invariant)
 [![Dev dependency Status](https://img.shields.io/david/dev/overlookmotel/simple-invariant.svg)](https://david-dm.org/overlookmotel/simple-invariant)
-[![Greenkeeper badge](https://badges.greenkeeper.io/overlookmotel/simple-invariant.svg)](https://greenkeeper.io/)
 [![Coverage Status](https://img.shields.io/coveralls/overlookmotel/simple-invariant/master.svg)](https://coveralls.io/r/overlookmotel/simple-invariant)
 
 # Super-simple invariant function
